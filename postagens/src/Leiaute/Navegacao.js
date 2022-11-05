@@ -20,8 +20,8 @@ const Navegacao = () => {
       
                 <nav className={styles.navegacao} >
                    
-                    <Botao conteudo='Escreva' endereco='paginas/CriacaoPostagens' ativo={estado_botao} />
-                    <Botao conteudo='Embeleze'   endereco='paginas/Editor' ativo={estado_botao} />
+                    <Botao conteudo='Escreva' endereco='CriacaoPostagens' ativo={estado_botao} />
+                    <Botao conteudo='Embeleze'   endereco='Editor' ativo={estado_botao} />
                     <Botao conteudo='Exporte'   endereco='paginas/Editor' ativo={estado_botao} />
                     <Botao conteudo='Página de Apresentação'   endereco='paginas/Editor' ativo={estado_botao} />
                 </nav>

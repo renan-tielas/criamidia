@@ -2,7 +2,6 @@
   width: 1200px;
   height: 1800px;
   align-items: center;
-  border: cyan 6px solid;
 }
 
 .titulo {
@@ -14,6 +13,10 @@
 }
 
 .descricao {
+  width: 80%;
+}
+
+.Sfrutas {
   width: 80%;
 }
 

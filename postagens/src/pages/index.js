@@ -13,17 +13,14 @@ export default function Home() {
 
   return (
     // <ChakraProvider>
-    <main className={styles.corpo} >
-      
-      <Header/>
+    
         
 
-      <Cabeca />
-      <Conteudo />
+     ' pagina inicial'
 
-      <Rodape />
+   
       
-    </main>
+  
 
 
 

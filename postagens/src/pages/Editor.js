@@ -5,7 +5,7 @@ import styles from '../styles/conteudos.module.css'
 
 
 
-const Rodape = () => {
+const Editor = () => {
 
 
 
@@ -22,4 +22,4 @@ const Rodape = () => {
 
 }
 
-export default Rodape
+export default Editor

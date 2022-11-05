@@ -5,38 +5,12 @@ import Head from 'next/head'
 // import clientPromise from '../../lib/mongodb'
 import Cabeca from '../../Leiaute/Cabeca'
 
-import * as Conteudos from '../../Conteudos/Conteudos' 
+import * as Conteudos from '../../Conteudos-desuso/Conteudos' 
 
 import Conteudo from '../../Leiaute/Conteudo'
 import Rodape from '../../Leiaute/Rodape'
 import styles from '../../styles/leiaute.module.css'
 import Header from '../../Leiaute/Header'
-
-
-
-// let indice = {
-//   titulo: 'javascript',
-//   secoes: { 
-//     titulo: 'A linguagem',
-//     subcategorias:{
-    
-//     categoria_x:{
-//       titulos_artigos:[],
-//     }
-      
-     
-//     }
-//   }   }
-
-
-
-// let defaultsettings = {
-//   ajaxsettings: {},
-//   uisettings: {}
-// };
-
-// defaultsettings["ajaxsettings"]["somekey"] = "some value";
-// defaultsettings["uisettings"]["somekey"] = "some value";
 
 
 
