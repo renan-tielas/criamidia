@@ -120,14 +120,8 @@ const handleSubmitCriarCodigo = async (e) => {
 
 
     // style={{width:'100%',marginBottom:'20rem'}}
-     <div >
+    //  <div >
         
-    <h1>
-    {/* {JSON.stringify(codigos)} */}
-     {/* {codigos[1].titulo} */}
-
-    
-</h1>
     <form className={styles.formulario_codigo} action="" method="post" id="formulario-codigo" onSubmit={handleSubmitCriarCodigo} >
       <fieldset className={styles.formulario_borda}>
 
@@ -179,43 +173,41 @@ const handleSubmitCriarCodigo = async (e) => {
       </fieldset>
 
     </form>
-   
-{/* {console.log(codigos[1].titulo)} */}
-{/* <ItemCodigo titulo={codigos.titulo} /> */}
-    </div> 
+
+    // </div> 
 
 
   )
 
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
 
-  const [codigos, poeCodigos] = useState([]) //clients setClients
-  try {
-    await useEffect(()=>{
-       api.get('/pegaCodigos').then(({data})=>{
-       poeCodigos(data.data);
-     }); 
+//   const [codigos, poeCodigos] = useState([]) //clients setClients
+//   try {
+//     await useEffect(()=>{
+//        api.get('/pegaCodigos').then(({data})=>{
+//        poeCodigos(data.data);
+//      }); 
  
-   }, [codigos])
- } catch (error) {
-   console.log(error)
+//    }, [codigos])
+//  } catch (error) {
+//    console.log(error)
    
- }
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  // const res = await fetch('https://.../posts')
-  // const posts = await res.json()
+//  }
+//   // Call an external API endpoint to get posts.
+//   // You can use any data fetching library
+//   // const res = await fetch('https://.../posts')
+//   // const posts = await res.json()
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      codigos,poeCodigos
-    },
-  }
-}
+//   // By returning { props: { posts } }, the Blog component
+//   // will receive `posts` as a prop at build time
+//   return {
+//     props: {
+//       codigos,poeCodigos
+//     },
+//   }
+// }
 
 export default FormularioCodigo
 

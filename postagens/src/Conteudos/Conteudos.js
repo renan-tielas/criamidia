@@ -1,8 +1,8 @@
 import ConteudoEditor from './ConteudoEditor'
-import ConteudoJavascript from './ConteudoJavascript'
+import ConteudoCriacaoPostagens from './ConteudoCriacaoPostagens'
 
 
 export {
     ConteudoEditor,
-    ConteudoJavascript
+    ConteudoCriacaoPostagens
 }

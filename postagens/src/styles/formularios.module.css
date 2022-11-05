@@ -17,12 +17,12 @@
 }
 
 .formulario_codigo {
+  padding-bottom: 3rem;
   font-family: LindenHill;
   font-size: 20px;
   color: #3b2401;
   display: inline-block;
-  margin-top: 1rem;
-  width: 40%;
+  width: 60%;
   margin-left: 4rem;
   display: grid;
   grid-auto-flow: row dense;
@@ -30,6 +30,8 @@
   grid-template-rows: 1.5fr 2fr 0.5fr 2fr;
   gap: 0px 0px;
   width: 40%;
+  height: calc(100% - 210px);
+  height: 380px;
 }
 
 .formulario_borda {
@@ -56,7 +58,6 @@
 
 .botao {
   width: 20%;
-  height: 10%;
   justify-self: center;
   align-self: center;
   position: relative;
@@ -73,40 +74,9 @@
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+  height: calc(100% - 210px);
   justify-content: center;
   align-items: center;
-}
-
-.row {
-  margin: 10px 20px;
-}
-
-.row-remember {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--light-border);
-  padding: 0 0 15px 0;
-}
-
-.container form {
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 12px 12px 10px var(--shadow-color);
-  flex: 1;
-}
-
-@media screen and (min-width: 768px) {
-  .container form {
-    flex: 0.5;
-    max-width: 600px;
-  }
-}
-.form_header {
-  text-align: center;
-  font-size: 1.5rem;
 }
 
 .form_field {
@@ -127,11 +97,6 @@
 
 .remember_label {
   margin: 0 10px;
-}
-
-.login_btn {
-  background-color: var(--primary-color);
-  color: var(--white);
 }
 
 .hello_user {

@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 // import clientPromise from '../../lib/mongodb'
 import Cabeca from '../../Leiaute/Cabeca'
-import ConteudoJavascript from '../../Conteudos/ConteudoJavascript'
+
 import * as Conteudos from '../../Conteudos/Conteudos' 
 
 import Conteudo from '../../Leiaute/Conteudo'
@@ -74,11 +74,11 @@ console.log(pagina)
 
 
     <main className={styles.corpo} >
-    <Header/>
+
 
 
     <Cabeca />
-    {/* <Conteudo conteudo={<ConteudoJavascript />} /> */}
+
 
        {/* <Conteudo conteudo={<'Conteudo'+paginaid/>} /> */}
        <Componente/>

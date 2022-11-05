@@ -7,7 +7,7 @@ import FormularioCodigo from '../Objetos/FormularioCodigo'
       // dados = {}
       
       
-      const ConteudoJavascript = () => {
+      const ConteudoCriacaoPostagens = () => {
       
       
       
@@ -41,4 +41,4 @@ import FormularioCodigo from '../Objetos/FormularioCodigo'
       
       }
       
-      export default ConteudoJavascript
+      export default ConteudoCriacaoPostagens

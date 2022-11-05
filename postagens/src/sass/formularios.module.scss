@@ -1,7 +1,10 @@
 
 @use "sass:math";
 @use 'variaveis' as v;
-%borda{  margin-bottom: 1rem;
+
+
+%borda{  
+  margin-bottom: 1rem;
     border-top:none;
     border-left:none;
     border-right:none;
@@ -24,21 +27,27 @@
     // display: flex;
     // flex-direction: column;
     // overflow: hidden;
+    padding-bottom: 3rem;
+    // !!!
+
+
     font-family: LindenHill;
     font-size: v.$fonte-tamanho1;
     color: v.$cor-marrom-escuro;
     display: inline-block;
-    margin-top: 1rem;
-    width: 40%;
+ 
+    width: 60%;
     // height:10%;
    margin-left: 4rem;
     display: grid; 
     grid-auto-flow: row dense; 
     grid-template-columns: 1.6fr; 
     grid-template-rows: 1.5fr 2fr 0.5fr 2fr; 
+    // border: red 2px solid;
     gap: 0px 0px; 
     width: 40%; 
-    // height: 10%; 
+    height: v.$altura-conteudo; 
+    height: 380px;
  
    }
   .formulario_borda{
@@ -73,7 +82,7 @@
 
 .botao{
     width: 20%;
-    height: 10%;
+    // height: 10%;
     // padding: 6px 20px;
     justify-self: center;
     align-self: center;
@@ -98,42 +107,12 @@
 // _____FORMULARIO________CTRL V______________
 
 .container {
-    display: flex;
-    height: 100vh;
+    // display: flex;
+    height: v.$altura-conteudo;
     justify-content: center;
     align-items: center;
   }
-  
-  .row {
-    margin: 10px 20px;
-  }
-  
-  .row-remember {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--light-border);
-    padding: 0 0 15px 0;
-  }
-  
-  .container form {
-    background-color: var(--secondary-color);
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 12px 12px 10px var(--shadow-color);
-    flex: 1;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .container form {
-      flex: 0.5;
-      max-width: 600px;
-    }
-  }
-  
-  .form_header {
-    text-align: center;
-    font-size: 1.5rem;
-  }
+
   
   .form_field {
     width: 100%;
@@ -157,10 +136,10 @@
   
 
  
-  .login_btn {
-    background-color: var(--primary-color);
-    color: var(--white);
-  }
+  // .login_btn {
+  //   background-color: var(--primary-color);
+  //   color: var(--white);
+  // }
   
   .hello_user {
     font-size: 2rem;

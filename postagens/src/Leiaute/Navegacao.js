@@ -22,8 +22,8 @@ const Navegacao = () => {
                    
                     <Botao conteudo='Escreva' endereco='paginas/CriacaoPostagens' ativo={estado_botao} />
                     <Botao conteudo='Embeleze'   endereco='paginas/Editor' ativo={estado_botao} />
-                    <Botao conteudo='Exporte'   endereco='paginas/Javascript' ativo={estado_botao} />
-                    <Botao conteudo='Página de Apresentação'   endereco='paginas/Outros' ativo={estado_botao} />
+                    <Botao conteudo='Exporte'   endereco='paginas/Editor' ativo={estado_botao} />
+                    <Botao conteudo='Página de Apresentação'   endereco='paginas/Editor' ativo={estado_botao} />
                 </nav>
     )
 

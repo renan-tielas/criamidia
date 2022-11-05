@@ -1,6 +1,7 @@
 import styles from '../styles/formularios.module.css'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Titulo from './Formulário/Titulo'
 
 // interface User {
 //   name: string
@@ -12,69 +13,117 @@ import { useForm } from 'react-hook-form'
 //   remember: boolean
 // }
 
+const Postagem = (titulo,autor,frutas,conteudo) => (
+<div className={styles.postagem}>
+<h1 className={styles.titulo}>{titulo}</h1>
+  <h2 className={styles.autor}>{autor}</h2>
+  <p className={styles.frutas}>{frutas} </p>
+  <p className={styles.conteudo}>{conteudo} </p>
+</div>
+)
+
+
+
+
+
+
+
 const Formulario = () => {
+
   const [autor, poeAutor] = useState()
-  const [titulo, poeTitulo] = useState()
-  const [descricao, poeDescricao] = useState()
+  const [frutas, poeFrutas] = useState()
   const [conteudo, poeConteudo] = useState()
+  const [conteudo2, poeConteudo2] = useState()
+  // const [titulo, poeTitulo] = useState()
+  
+
+  const [titulo, poeDado] = useState()
+
+const pegaInput = (dadoInput) => {
+  poeDado(dadoInput)
+}
+
 
   const {
     register,
     formState: { errors },
     handleSubmit,  } = useForm()
 
-  const onSubmit = handleSubmit(({ nomeautor, password, remember }) => {
+  const onSubmit = handleSubmit(({ autor,conteudo,conteudo2,frutas,titulo,titulo2}) => {
     // You should handle login logic with username, password and remember form data
-    poeAutor({ autor: nomeautor })
+    poeAutor({ autor:autor })
+    poeConteudo({ conteudo:conteudo })
+    poeConteudo2({ conteudo2:conteudo2 })
+    poeFrutas({frutas:frutas})
+    // poeTitulo({ titulo:titulo })
+    poeTitulo2({ titulo2:titulo2 })
 
   })
+  // const onSubmit = handleSubmit((data) => console.log(data))
 
 
-
+// {` titulo${titulo.titulo} autor${autor.autor}  conteudo${conteudo.conteudo}  `}
 
 
 
   return (
-    <div className={styles}>
-      {autor ? (
-        <span className={styles.hello_user}>Hello, {autor.autor}!</span>
+    <div>
+      {conteudo ? (
+        <div>{Postagem(autor.autor,conteudo.conteudo)} </div>
       ) : (
-        <div>
-        {console.log(autor)}
+       
+        // <form className={styles.formulario_codigo} action="" method="post" id="formulario-codigo" onSubmit={onSubmit} >
         <form className={styles.formulario_codigo} action="" method="post" id="formulario-codigo" onSubmit={onSubmit} >
         <fieldset className={styles.formulario_borda}>
   
           <legend style={{ padding: '10px 20px', fontSize: '22px', backgroundColor:'white' }}>Preencha sua postagem!</legend>
          
           <div className="topo">
-  
-            <input className={styles.titulo} tabIndex={1} type="text" name="text" id="POST-titulo" 
+      
+{/*   
+            <input className={styles.titulo} tabIndex={0} type="text" name="titulo" id="POST-titulo" 
+                {...register("titulo")}
             value={titulo}
-            onChange={(e)=>{poeTitulo(e.target.value)}} />
-            <label htmlFor="POST-titulo">Titulo do código, ou tópico</label>
+            onChange={(e)=>{poeTitulo(e.target.value)}}
+             />
+            <label htmlFor="POST-titulo">Titulo do código, ou tópico</label> */}
+{(Titulo('tituloooo',0,pegaInput))}
+
             <div></div>
-  
-            <textarea className={styles.descricao} name="conteudo" id="POST-descricao" cols={40} rows={5}
-             value={descricao}
-             onChange={(e)=>{poeDescricao(e.target.value)}} ></textarea>
-            <label htmlFor="POST-descricao">Descrição</label>
-  
+         
+       
+          
   
           {/* <div onAuxClick={}> */}
-          <textarea className={styles.conteudo} name="text" id="POST-texto" 
+          <input className={styles.conteudo} name="text" id="POST-conteudo" 
+           {...register("conteudo")}
            value={conteudo}
-           onChange={(e)=>{poeConteudo(e.target.value)}} ></textarea>
-          <label htmlFor="POST-texto">Conteúdo</label>
+            onSubmit={(e)=>{poeConteudo(e.target.value)}} 
+            tabIndex={2}
+           ></input>
+          <label htmlFor="POST-conteudo">Conteúdo</label>
+         
           </div>
-  <input className={styles.titulo} tabIndex={1}  {...register("autor")}type="text" name="text" id="POST-autor" 
+
+  {/* <input className={styles.titulo} tabIndex={4}  {...register("autor")}
+  type="text" name="autor" id="POST-autor" 
             value={autor}
-            onChange={(e)=>{poeAutor(e.target.value.autor)}} />
-            <label htmlFor="POST-autor">Autor</label>
+            onSubmit={(e)=>{poeAutor(e.target.value.autor)}} />
+
+
+            <label htmlFor="POST-autor">Autor</label> */}
+            <input className={styles.titulo} tabIndex={5}  {...register("frutas")}
+  type="text" name="frutas" id="POST-frutas" 
+            value={frutas}
+            onSubmit={(e)=>{poeFrutas(e.target.value.frutas)}} />
+
+
+            <label htmlFor="POST-frutas">Frutas</label>
          
           <button className={styles.botao} type="submit" form="formulario-codigo" value="Submit">Enviar</button>
         </fieldset>
   
-      </form></div>
+      </form>
       )}
     </div>
   )

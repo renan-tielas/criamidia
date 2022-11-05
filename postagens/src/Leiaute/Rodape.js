@@ -17,18 +17,20 @@ const Rodape = () => {
                 <div className={styles.rodape} >
                    
                     <div className={styles.secao_1}>
-                    Site para aprender desenvolvimento web em português, com edição de código ao vivo, marcação de progresso, e compartilhamento de conhecimento.
-                     <br/><br/>Aprenda, e compartilhe com os amigos!
+                    Site para criação de postagens: edição do texto, das categorias, da aparência, e do formato da postagem
+                    Coloque autoria, ou nome do projeto, contatos, links e @s, exporte para as principais redes sociais.
+                     <br/><br/>Compartilhe com os amigos!
+                    </div>
+                    
+                    <div className={styles.secao_1}>
+                    Crie também sua página de Apresentação
                     </div>
                     <div className={styles.secao_1}>
-                    Código Aleatório
+                    Compartile suas postagens com a nossa pagina: @ditovivo
                     </div>
                     <div className={styles.secao_1}>
-                    Contribua com seu código, ensine para a comunidade :)
-                    </div>
-                    <div className={styles.secao_1}>
-                    Veja seu progesso<br/><br/>
-                    Obrigado por colaborar
+                    Feito por <br/>Renan Tielas<br/><br/>
+                
                     </div>
          
                     
